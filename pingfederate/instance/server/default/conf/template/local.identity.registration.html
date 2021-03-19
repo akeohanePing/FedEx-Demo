@@ -82,7 +82,7 @@ is not recommended as it may interfere with expected server behavior.
 
         .ping-header .company-logo {
             display: block;
-            background-image: url(/app/images/logo.svg);
+            background-image: url(/app/images/logo.png);
             height: 30px;
             background-repeat: no-repeat;
             background-position: center;
@@ -183,13 +183,13 @@ is not recommended as it may interfere with expected server behavior.
     }
 
         .ping-button.normal {
-            background-color: #66c5b1 !important;
-            border-color: #66c5b1 !important;
+            background-color: #ff6200 !important;
+            border-color: #ff6200 !important;
             color: white !important;
         }
         .ping-button.normal:hover, .ping-button.normal:focus {
-            background-color: #456059 !important;
-            border-color: #456059 !important;
+            background-color: #ff6200 !important;
+            border-color: #ff6200 !important;
         }
 
 
@@ -208,6 +208,10 @@ is not recommended as it may interfere with expected server behavior.
             font-size: 18px;
             top: 40px;
             font-weight: normal;
+        }
+
+        .required::before{
+            background-color: #4d148c !important
         }
 
 
@@ -248,18 +252,7 @@ is not recommended as it may interfere with expected server behavior.
     <!-- .ping-header -->
 
     <div class="ping-body-container">
-        <h1>
-            hello!!!!!
-        </h1>
         <div>
-            <div class="account-type">
-            <div>Which of your accounts would you like to access online?</div>
-            <div class="account-type-radios">
-                <input type="radio" name="account-type" id="checking" /><label for="personal">Checking</label>
-                <input type="radio" name="account-type" id="savings" /><label for="business">Savings</label>
-                <input type="radio" name="account-type" id="credit" /><label for="corporate">Credit</label>
-            </div>
-            </div>
             <form method="POST" action="$url" autocomplete="off">
                 <input type="hidden" name="isRegisterForm" value="true"/>
 
