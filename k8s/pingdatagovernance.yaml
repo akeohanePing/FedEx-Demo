@@ -1,0 +1,82 @@
+apiVersion: v1
+data:
+  # SERVER_PROFILE_URL: https://rlylepingidentity:ff63c171b7cca1d86e854d0dba74447ebc5dfe1b@github.com/Technical-Enablement-PingIdentity/BXFinance-ServerProfiles.git
+  SERVER_PROFILE_PATH: pingdatagovernance
+kind: ConfigMap
+metadata:
+  labels:
+    role: pingdatagovernance
+  name: pingdatagovernance-environment-variables
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    role: pingdatagovernance
+  name: pingdatagovernance
+spec:
+  ports:
+  - name: https
+    port: 3443
+    targetPort: 443
+  - name: ldaps
+    port: 636
+    targetPort: 636
+  selector:
+    role: pingdatagovernance
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    role: pingdatagovernance
+  name: pingdatagovernance
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      role: pingdatagovernance
+  template:
+    metadata:
+      labels:
+        role: pingdatagovernance
+      name: pingdatagovernance
+    spec:
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: shared-vars
+        - secretRef:
+            name: server-profile-url
+            optional: false
+        - secretRef:
+            name: devops-secret
+            optional: true
+        - configMapRef:
+            name: pingdatagovernance-environment-variables
+        image: pingidentity/pingdatagovernance:2012-8.2.0.0
+        name: pingdatagovernance
+        ports:
+        - containerPort: 80
+        - containerPort: 443
+        - containerPort: 636
+        resources:
+          limits:
+            cpu: "2"
+            memory: 2.5Gi
+          requests:
+            cpu: "1"
+            memory: 2.5Gi
+        volumeMounts:
+        - name: pingdatagovernance-license
+          mountPath: "/opt/in/instance/PingDataGovernance.lic"
+          subPath: PingDataGovernance.lic
+          readOnly: true
+      volumes:
+      - name: pingdatagovernance-license
+        secret:
+          secretName: pingdatagovernance-license
+      initContainers:
+      - name: init
+        image: curlimages/curl:latest
+        command: ['sh', '-c', 'until curl --connect-timeout 1 --silent -k https://pingdirectory:443/directory/v1 ; do echo waiting for pingdirectory ; sleep 3 ; done']
