@@ -7,10 +7,10 @@
 /* Variables */
 
 :root {
-  --primary: #66c5b1;
-  --secondary: #456059;
-  --dark: #1f0f11;
-  --info: #66b0c0;
+  --primary: #ff6200;
+  --secondary: #4d148c;
+  --dark: #000000;
+  --info: #007ab7;
 }
 
 
@@ -29,9 +29,9 @@ body {
   align-items: center;
   padding-top: 40px;
   padding-bottom: 40px;
-  background: url("../images/background.jpg") center center no-repeat var(--secondary);
+  background: url('/app/images/home-hero-background.jpg') center center no-repeat var(--secondary);
   background-size: cover;
-  font-family: "Rubik";
+  font-family: "Roboto";
 }
 
 
