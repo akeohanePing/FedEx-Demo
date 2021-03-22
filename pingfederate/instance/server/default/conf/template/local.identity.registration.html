@@ -83,12 +83,10 @@ is not recommended as it may interfere with expected server behavior.
         .ping-header .company-logo {
             display: block;
             background-image: url(/app/images/logo.png);
-            height: 30px !important;
-            max-height: 30px !important;
+            height: 150px !important;
+            background-size: 150px;
             background-repeat: no-repeat;
-            background-attachment: fixed;
             background-position: center; 
-            background-position: center;
             margin-bottom: 40px;
         }
 
@@ -250,6 +248,7 @@ is not recommended as it may interfere with expected server behavior.
     <div class="ping-header">
         <a class="back-link" href="./app/">< Back</a>
         <span class="company-logo"><!-- client company logo here --></span>
+        <img />
         $templateMessages.getMessage($messageKeyPrefix, "title")
     </div>
     <!-- .ping-header -->
