@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/app/static/css/main.9dae4c55.chunk.css",
+    "main.js": "/app/static/js/main.53904f3b.chunk.js",
+    "runtime-main.js": "/app/static/js/runtime-main.eab47560.js",
+    "static/js/2.89ada182.chunk.js": "/app/static/js/2.89ada182.chunk.js",
+    "index.html": "/app/index.html",
+    "precache-manifest.6df248fc242c553b6c9794275e5c09bb.js": "/app/precache-manifest.6df248fc242c553b6c9794275e5c09bb.js",
+    "service-worker.js": "/app/service-worker.js",
+    "static/js/2.89ada182.chunk.js.LICENSE.txt": "/app/static/js/2.89ada182.chunk.js.LICENSE.txt",
+    "static/media/fedExLogo.png": "/app/static/media/fedExLogo.f9f3a4bf.png",
+    "static/media/home.scss": "/app/static/media/heroImage.0be730ab.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.eab47560.js",
+    "static/js/2.89ada182.chunk.js",
+    "static/css/main.9dae4c55.chunk.css",
+    "static/js/main.53904f3b.chunk.js"
+  ]
+}
