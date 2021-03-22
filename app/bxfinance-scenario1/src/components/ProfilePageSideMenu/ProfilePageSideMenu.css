@@ -1,0 +1,41 @@
+.profileSideMenuParent {
+    display: flex;
+    flex: 1;  /* 1 and it will fill whole space left if no flex value are set to other children*/
+    /* background: gold; */
+    overflow: auto;
+    height: 600px;
+}
+
+.leftProfileDiv {
+    width: 300px;
+    padding: 4px !important;
+    /* background: lightblue; */
+}
+
+.rightProfileDiv {
+    flex: 1;
+    padding: 24px !important;
+    /* background: lightgreen; */
+}
+
+.sideMenuItemSelected{
+    color: #4d148c !important;
+    font-weight: 400 !important;
+}
+
+.sideMenuItem{
+    font-weight: 500 !important;
+    text-decoration: underline;
+}
+
+.sideMenuItemRoot{
+    border-bottom: 1px solid lightgray !important;
+}
+
+.sideMenuListItemIcon{
+    min-width: 40px !important;
+}
+
+.sideMenuGutters{
+    padding: 8px 0px 8px 0px !important;
+}

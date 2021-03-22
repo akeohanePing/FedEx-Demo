@@ -1,0 +1,17 @@
+.profilePageParent{
+    height: calc(100vh - 130px) !important;
+    padding: 12px 20% 0px 20% !important;
+}
+
+.profilePageTop{
+    background-color: #708090;
+    color: white;
+    padding: 10px;
+    font-weight: 500;
+}
+
+.profilePageBottom{
+    position: absolute; 
+    bottom: 46px; 
+}
+

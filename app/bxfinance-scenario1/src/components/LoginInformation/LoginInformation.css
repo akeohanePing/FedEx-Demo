@@ -1,0 +1,33 @@
+.loginInfoHeader{
+    font-weight: 400 !important;
+    font-size: 40px !important;
+    color: #4d148c !important;
+    margin-bottom: 0px;
+}
+
+.infoEditParent{
+    display: flex;
+}
+
+.infoEditChildLeft{
+    flex: 1;
+    max-width: calc(50% - 15px);
+    margin-right: 30px;
+}
+
+.infoSubHeader{
+    font-weight: 400 !important;
+    color: #4d148c !important;
+    margin-bottom: 2px !important;
+    font-size: 24px !important;
+}
+
+.contactInfoText{
+    margin: 0px 
+}
+
+.viewAndEditInfoHeader{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 48px
+}

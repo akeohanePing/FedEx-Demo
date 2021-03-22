@@ -1,0 +1,89 @@
+.inputParent{
+    position: relative;
+    top: 350px;
+    left: calc(50% - 275px);
+    z-index: 2;
+    width: 550px;
+    // @include media-breakpoint-down(sm) {
+    //     // top
+    // }
+}
+
+.trackingTextField{
+    width: 400px;
+    margin-right: 4px !important;
+    background-color: white;
+    margin-bottom: 12px !important
+}
+
+@media screen and (min-width: 2750px){
+    .inputParent{
+        position: absolute;
+        top: 55% !important;
+        left: calc(50% - 275px);
+        z-index: 2;
+        width: 550px
+    }
+}
+
+.submitButton{
+    width: 146px;
+    background-color: #ff6200 !important;
+    height: 56px;
+    border-radius: 0 !important;
+}
+
+.inputUnderline::after{
+    border-bottom: none !important;
+    content: none !important;
+}
+
+.inputUnderline::before{
+    border-bottom: none !important;
+    content: none !important;
+}
+
+.inputUnderline{
+    border-bottom: none !important;
+}
+
+.inputRoot{
+    background-color: white !important;
+}
+
+.inputRoot::after{
+    border-bottom: none !important;
+    content: none !important;
+}
+
+.trackingLabel{
+    text-transform: uppercase;
+    font-weight: bold !important;
+    margin-top: 3px;
+}
+
+.inputFocused{
+    border-left: 2px solid #4d148c !important;
+    border-radius: 0 0 0 0 !important;
+}
+.inputFocused::after{
+    border-left: 2px solid #4d148c !important;
+    border-radius: 0 0 0 0 !important;
+}
+
+.inputLabelFocused{
+    color: #4d148c !important;
+}
+
+.submitButtonLabel{
+    color: white !important;
+    text-transform: uppercase;
+    font-size: 19px !important;
+    font-weight: 700 !important
+}
+
+.underTrackingText{
+    color: white;
+    font-size: 14px;
+    font-weight: 700
+}

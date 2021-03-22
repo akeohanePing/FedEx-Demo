@@ -1,0 +1,459 @@
+/* NavbarMain */
+
+
+@import '../../styles/variables.scss';
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/bootstrap-grid';
+
+section.navbar-main {
+  background: theme-color("secondary");
+  // padding-top: 2rem;
+  padding-bottom: 1rem;
+  position: relative;
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .navbar {
+    background-color: #4d148c !important;
+
+    .navbar-brand {
+      img {
+        height: 50px;
+      }
+    }
+
+    .nav-link {
+      color: white;
+      font-weight: 300;
+
+      &.active {
+        font-weight: 500;
+      }
+    }
+
+    &.navbar-desktop {
+      padding-left: 0;
+      padding-right: 0;
+
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+
+      .navbar-nav-main {
+        .nav-item {
+          margin-right: 2rem;
+
+          @include media-breakpoint-down(md) {
+            margin-right: 1rem;
+          }
+
+          .nav-link {
+            padding-left: 0;
+
+            &.active {
+              position: relative;
+
+              &::after{
+                content: "";
+                position: absolute;
+                left: 20%;
+                bottom: -2.2rem;
+                width: 0;
+                height: 0;
+                border-left: 15px solid transparent;
+                border-right: 15px solid transparent;
+                border-top: 15px solid theme-color("secondary");
+                clear: both;
+              }
+            }
+          }
+        }
+      }
+
+      .navbar-nav-utility {
+        position: relative;
+        width: 300px;
+
+        @include media-breakpoint-down(md) {
+          margin-top: -2rem;
+        }
+
+        .nav-item {
+          &.register {
+            position: absolute;
+            top: 2rem;
+            right: 0;
+            font-size: 14px;
+          }
+
+          &.login,
+          &.logout {
+            position: relative;
+            margin-left: 10px;
+            padding-left: 10px;
+            font-size: 14px;
+            line-height: 25px;
+
+            &:before {
+              content: "";
+              width: 1px;
+              height: 20px;
+              border-left: 1px solid white;
+              position: absolute;
+              left: 0;
+              top: 25%;
+            }
+          }
+        }
+      }
+    }
+
+    &.navbar-mobile {
+      @include media-breakpoint-up(md) {
+        display: none;
+      }
+
+      .collapsing {
+        -webkit-transition: none;
+        transition: none !important;
+        display: none;
+      }
+
+      .mobilenav-menu,
+      .mobilenav-brand,
+      .mobilenav-login {
+        flex: 1;
+      }
+
+      .navbar-toggler {
+        border: 0;
+      }
+
+      .navbar-toggler {
+        max-width: 3.5rem;
+      }
+
+      .mobilenav-brand {
+        text-align: center;
+
+        .navbar-brand {
+          margin: 0;
+
+          img {
+            height: 30px;
+          }
+        }
+      }
+
+      .navbar-nav-main {
+        margin: 1rem -15px;
+        padding: 1rem 0;
+
+        .nav-link {
+          color: black;
+          padding-left: 15px;
+        }
+      }
+
+      .nav-link.login,
+      .nav-link.logout {
+        font-size: 12px;
+        text-align: right;
+      }
+    }
+  }
+}
+
+.home {
+  section.navbar-main {
+    box-shadow: none;
+
+    @include media-breakpoint-up(md) {
+      background: transparent;
+      margin-bottom: -180px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .navbar-desktop {
+      .navbar-nav-main {
+        .nav-item {
+          .nav-link {
+            &.active {
+              &::after{
+                content: unset;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* PING INTEGRATION: hide this to take back control of the sign in out links. */
+/* .accounts {
+  section.navbar-main {
+    .logout {
+      display: flex !important;
+    }
+
+    .navbar-mobile {
+      .logout {
+        display: block !important;
+      }
+    }
+
+    .login,
+    .register {
+      display: none;
+    }
+  }
+} */
+.navBarRoot{
+  background-color: #4d148c !important;
+  padding: 0 10% 0 10%;
+  width: 100vw;
+  min-width: 100vw;
+}
+
+.navBarText{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 14px;
+  color: white;
+  margin: 0px 0px 0px 20px
+}
+
+.logo{
+  margin: 0 100px 0 0;
+  width: auto;
+  height: auto;
+  max-width: 88px;
+  max-height: 60px;
+  transition: .25s ease;
+}
+
+.signUpButton{
+  margin: 0 20px 0 auto !important;
+  height: 64px
+}
+
+.signUpButtonActive{
+  margin: 0 20px 0 auto !important;
+  height: 64px;
+  background-color: white !important;
+  color: #4d148c !important;
+  border-radius: 0px !important;
+}
+
+.endIconSignUpButton> *:first-child{
+  /* height: 28px !important;
+  width: 28px !important; */
+  font-size: 28px !important;
+}
+
+.signUpButtonLabel{
+  text-transform: none !important;
+  font-size: 14px;
+  font-weight: 400;
+  // text-overflow: ellipsis;
+  // overflow: hidden;
+  // white-space: nowrap;
+}
+
+
+.menuPaperList{
+  padding-bottom: 0px !important;
+}
+ 
+.menuPaper{
+  width: 250px;
+  margin-top: 48px;
+  padding-top: 10px;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+  border-radius: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+.modalHeaderFedEx{
+  text-align: center;
+  margin: 24px;
+  color: #4d148c !important;
+  font-weight: 300;
+}
+
+.navBarMenuItem{
+  padding: 12px !important;
+  border-bottom: 1px solid lightgray !important;
+}
+
+.signOutMenuItem{
+  padding: 12px !important;
+  color: #007ab7 !important;
+  text-transform: uppercase !important;
+  font-weight: bold !important;
+}
+
+.menuPaper{
+  width: 250px;
+  margin-top: 48px;
+  padding-top: 10px;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+  border-radius: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+.dropDownTextField{
+  min-width: 230px !important;
+  display: table !important;
+  margin: 0 auto !important;
+  margin-bottom: 10px !important;
+}
+
+.submitButton{
+  width: 146px;
+  background-color: #ff6200 !important;
+  height: 56px;
+  border-radius: 0 !important;
+}
+
+.submitButtonDropDown{
+  text-align: center;
+  width: 230px;
+  background-color: #ff6200 !important;
+  height: 56px;
+  display: table !important;
+  margin: 0 auto !important;
+  padding-top: 16px;
+  border-radius: 0 !important;
+}
+
+.submitButtonModal{
+  text-align: center;
+  width: 230px;
+  background-color: #ff6200 !important;
+  height: 56px;
+  display: table !important;
+  margin: 0 auto !important;
+  border-radius: 0 !important;
+}
+
+.inputUnderline::after, .inputUnderlineDropDown::after{
+  border-bottom: none !important;
+  content: none !important;
+}
+
+.inputUnderline::before, .inputUnderlineDropDown::before{
+  border-bottom: none !important;
+  content: none !important;
+}
+
+.inputUnderline, .inputUnderlineDropDown{
+  border-bottom: none !important;
+}
+
+.inputRootDropDown{
+  width: 230px
+}
+
+.inputRoot::after{
+  border-bottom: none !important;
+  content: none !important;
+}
+
+.trackingLabel, .trackingLabelDropDown{
+  text-transform: uppercase;
+  font-weight: bold !important;
+  margin-top: 3px;
+}
+
+.inputFocused, .inputFocusedDropDown{
+  border-left: 2px solid #4d148c !important;
+  border-radius: 0 0 0 0 !important;
+}
+
+.inputFocused::after, .inputFocusedDropDown::after{
+  border-left: 2px solid #4d148c !important;
+  border-radius: 0 0 0 0 !important;
+}
+
+.inputLabelFocused, .inputLabelFocusedDropDown{
+  color: #4d148c !important;
+}
+
+.submitButtonLabel{
+  color: white !important;
+  text-transform: uppercase;
+  font-size: 19px !important;
+}
+
+.underTrackingText{
+  color: white;
+  font-size: 14px;
+  font-weight: 700
+}
+
+.formControlDropDown{
+  min-width: 230px !important;
+  display: table !important;
+  margin: 0 auto !important;
+  margin-bottom: 10px !important;
+}
+
+.checkBoxDropDown{
+  padding-left: 0px !important;
+  color: #007ab7 !important;
+}
+
+.dropDownClickableText{
+  font-size: 12px;
+  text-transform: capitalize;
+  font-weight: 700 !important;
+  color: #007ab7 !important;
+  /* display: table !important; */
+  margin: 0 auto !important;
+  margin-top: 18px !important;
+  margin-bottom: 18px !important;
+  padding-left: 10px;
+}
+
+.dropDownText{
+  font-size: 15px;
+  line-height: 21px;
+  font-weight: 300;
+  margin: 0 auto !important;
+  margin-top: 18px !important;
+  padding-left: 10px;
+}
+
+.dropDownClickableText:hover, .navBarText:hover, .clickableSpan:hover, .purpleClickableText:hover{
+  text-decoration: underline;
+}
+
+.dropDownClickableText:hover, .navBarText:hover, .clickableSpan:hover, .purpleClickableText:hover, .logo:hover{
+  cursor: pointer;
+}
+
+.navBarMenuItem{
+  padding: 12px !important;
+  border-bottom: 1px solid lightgray !important;
+}
+
+.signOutMenuItem{
+  padding: 12px !important;
+  color: #007ab7 !important;
+  text-transform: uppercase !important;
+  font-weight: bold !important;
+}
+
+.menuPaperList{
+  padding-bottom: 0px !important;
+}
