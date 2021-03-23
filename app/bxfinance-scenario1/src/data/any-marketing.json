@@ -4,19 +4,11 @@
 		"primary": [
 			{
 				"title": "My Dashboard",
-				"url": "/any-marketing/dashboard"
-			},
-			{
-				"title": "Client Profiles",
-				"url": "/any-marketing/client-profiles"
+				"url": "/any-marketing"
 			},
 			{
 				"title": "Tracking",
-				"url": "/any-marketing/tracking"
-			},
-			{
-				"title": "Equities Trading",
-				"url": "/any-marketing/equities-trading"
+				"url": "/any-marketing"
 			},
 			{
 				"title": "Other Services",
@@ -33,55 +25,63 @@
 		"footer": [
 			{
 				"title": "Our Company",
-				"url": "/",
+				"url": "/app",
 				"children": [
+					{
+						"title": "About FedEx",
+						"url": "/app"
+					},
+					{
+						"title": "Our Portfolio",
+						"url": "/app"
+					},
 					{
 						"title": "Investor Relations",
-						"url": "/"
+						"url": "/app"
 					},
 					{
-						"title": "Corporate Citizenship",
-						"url": "/"
-					},
-					{
-						"title": "News",
-						"url": "/"
-					},
-					{
-						"title": "Locations",
-						"url": "/"
+						"title": "Careers",
+						"url": "/app"
 					}
 				]
 			},
 			{
-				"title": "800.543.2276",
-				"url": "/",
+				"title": "FedEx Blog",
+				"url": "/app",
 				"children": [
 					{
-						"title": "help@awadvisor.com",
-						"url": "/"
+						"title": "Corporate Responsibility",
+						"url": "/app"
 					},
 					{
-						"title": "Chat with Us",
-						"url": "/"
+						"title": "Newsroom",
+						"url": "/app"
+					},
+					{
+						"title": "Contact Us",
+						"url": "/app"
 					}
 				]
 			},
 			{
-				"title": "Privacy & Security",
-				"url": "/",
+				"title": "FedExCompatible",
+				"url": "/app",
 				"children": [
 					{
-						"title": "Terms of Use",
-						"url": "/"
+						"title": "Developer Resource Center",
+						"url": "/app"
 					},
 					{
-						"title": "Disclosures",
-						"url": "/"
+						"title": "FedEx Logistics",
+						"url": "/app"
 					},
 					{
-						"title": "Accessibility",
-						"url": "/"
+						"title": "FedEx Cross Border",
+						"url": "/app"
+					},
+					{
+						"title": "ShopRunner",
+						"url": "/app"
 					}
 				]
 			}
@@ -166,5 +166,5 @@
 			"modify": "Modify Record"
 		}
 	},
-	"copyright": "© AnyMarketing, 2020 <br /> Member FDIC, Member SIPC <br /> Equal Housing Lender"
+	"copyright": "© FedEx 1995-2021"
 }

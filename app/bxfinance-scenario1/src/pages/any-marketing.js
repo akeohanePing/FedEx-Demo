@@ -241,27 +241,9 @@ class AnyMarketing extends React.Component {
           {/* DESKTOP NAV */}
           <Navbar color="light" light expand="md" className="navbar-desktop">
             <Container>
-              <Link to="/" className="navbar-brand"><img src={process.env.PUBLIC_URL + "/images/any-marketing-logo.png"} alt={data.brand} /></Link>
+              {/* <Link to="/" className="navbar-brand"></Link> */}
+              <img className={'logoMarketing'} style={{ height: '30px !important' }} src={process.env.PUBLIC_URL + "/images/logo.png"} />
               <NavbarToggler onClick={this.toggle.bind(this)} />
-              <Collapse isOpen={this.state.isOpen} navbar>
-                <Nav className="justify-content-end ml-auto navbar-nav-utility" navbar>
-                  <NavItem>
-                    <NavLink><img src={process.env.PUBLIC_URL + "/images/icons/search.svg"} alt={data.menus.utility.search} /></NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink><img src={process.env.PUBLIC_URL + "/images/icons/map-marker.svg"} alt={data.menus.utility.locations} /></NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink><img src={process.env.PUBLIC_URL + "/images/icons/support.svg"} alt={data.menus.utility.support} /></NavLink>
-                  </NavItem>
-                  <NavItem className="logout">
-                    {!this.state.loggedOut && 
-                      <a onClick={this.signOut.bind(this)} className="nav-link"><img src={process.env.PUBLIC_URL + "/images/icons/user.svg"} alt={data.menus.utility.logout} className="mr-1" /> {data.menus.utility.logout}</a>}
-                    {this.state.loggedOut && 
-                      <a onClick={this.signOut.bind(this)} className="nav-link"><img src={process.env.PUBLIC_URL + "/images/icons/user.svg"} alt={data.menus.utility.login} className="mr-1" /> {data.menus.utility.logout}</a>}
-                  </NavItem>
-                </Nav>
-              </Collapse>
             </Container>
           </Navbar>
           <Navbar color="light" light expand="md" className="navbar-desktop">
@@ -276,43 +258,6 @@ class AnyMarketing extends React.Component {
                 })}
               </Nav>
             </Container>
-          </Navbar>
-          {/* MOBILE NAV */}
-          <Navbar color="light" light expand="md" className="navbar-mobile">
-            <div className="mobilenav-menu">
-              <NavbarToggler onClick={this.toggle.bind(this)} />
-            </div>
-            <div className="mobilenav-brand">
-              <Link to="/" className="navbar-brand"><img src={process.env.PUBLIC_URL + "/images/any-marketing-logo.png"} alt={data.brand} /></Link>
-            </div>
-            <div className="mobilenav-login">
-              <Link to="/" className="nav-link logout">Sign Out</Link>
-            </div>
-            <Collapse isOpen={this.state.isOpen} navbar>
-              <Nav className="navbar-nav-main navbar-light bg-light" navbar>
-                {data.menus.primary.map((item, i) => {
-                  return (
-                    <NavItem key={i}>
-                      <NavLink to={item.url} activeClassName="active" exact tag={RRNavLink}>{item.title}</NavLink>
-                    </NavItem>
-                  );
-                })}
-              </Nav>
-              <Nav className="navbar-nav-utility" navbar>
-                <NavItem>
-                  <NavLink><img src={process.env.PUBLIC_URL + "/images/icons/search.svg"} alt={data.menus.utility.search} className="mr-1" /> {data.menus.utility.search}</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink><img src={process.env.PUBLIC_URL + "/images/icons/map-marker.svg"} alt={data.menus.utility.locations} className="mr-1" /> {data.menus.utility.locations}</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink><img src={process.env.PUBLIC_URL + "/images/icons/support.svg"} alt={data.menus.utility.support} className="mr-1" /> {data.menus.utility.support}</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink><img src={process.env.PUBLIC_URL + "/images/icons/user.svg"} alt={data.menus.utility.logout} className="mr-1" /> {data.menus.utility.logout}</NavLink>
-                </NavItem>
-              </Nav>
-            </Collapse>
           </Navbar>
         </section>
         <section className="welcome-bar">

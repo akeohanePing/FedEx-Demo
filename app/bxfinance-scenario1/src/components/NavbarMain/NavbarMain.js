@@ -553,7 +553,8 @@ class NavbarMain extends React.Component {
                     root: 'navBarMenuItem'
                 }}
             >
-              <Link to="/pf/idprofile.ping?LocalIdentityProfileID=defaultIdentityProfile" >Profile</Link>
+              {/* <Link to="/pf/idprofile.ping?LocalIdentityProfileID=defaultIdentityProfile" replace >Profile</Link> */}
+              <a href="/pf/idprofile.ping?LocalIdentityProfileID=defaultIdentityProfile" >Profile</a>
             </MenuItem>
             <MenuItem
                 classes={{
@@ -633,11 +634,11 @@ class NavbarMain extends React.Component {
                 Log In
             </Button> */}
           <Link href="#" className="submitButtonDropDown submitButtonLabel" onClick={this.triggerModalLogin.bind(this)}> {data.menus.utility.login}</Link>
-            <p
+            {/* <p
                 className={'dropDownClickableText'}
             >
                 Forgot Password/User Id?
-            </p>
+            </p> */}
             <Divider/>
             <p
                 className={'dropDownText'}
