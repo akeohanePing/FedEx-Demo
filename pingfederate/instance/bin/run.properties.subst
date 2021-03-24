@@ -102,7 +102,7 @@ radius.properties.file=radius.properties
 # If you do want to turn on "pf.http.port" for testing purposes, you will
 # need to update data/config-store/session-cookie-config.xml
 # to turn off the secure cookie.
-pf.http.port=-80
+pf.http.port=-1
 
 #
 # This property defines the port on which PingFederate listens for
