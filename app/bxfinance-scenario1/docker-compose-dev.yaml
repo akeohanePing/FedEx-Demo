@@ -14,4 +14,4 @@ services:
             - '5000:5000'
         environment:
             - 'CHOKIDAR_USEPOLLING=true'
-        image: 'bxfinance-app:dev'
+        image: 'fedex-demo-app:latest'
