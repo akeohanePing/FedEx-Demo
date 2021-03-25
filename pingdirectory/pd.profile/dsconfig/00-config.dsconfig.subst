@@ -109,6 +109,12 @@ dsconfig set-access-control-handler-prop \
     --add 'global-aci:(targetcontrol="1.3.6.1.4.1.4203.1.10.2")(version 3.0;acl "Authenticated access to the no-op request control for the Delegated Admin API"; allow (read) userdn="ldap:///all";)' 
 
 dsconfig create-access-token-validator \
+    --validator-name 'Mock match admin users'  \
+    --type mock  \
+    --set 'identity-mapper:All Admin Users'  \
+    --set enabled:true 
+
+dsconfig create-access-token-validator \
     --validator-name PingFederate  \
     --type ping-federate  \
     --set 'identity-mapper:Exact Match'  \
@@ -379,6 +385,10 @@ dsconfig set-log-publisher-prop \
     --set enabled:false 
 
 dsconfig set-log-publisher-prop \
+    --publisher-name 'Debug Trace Logger'  \
+    --set enabled:true 
+
+dsconfig set-log-publisher-prop \
     --publisher-name 'File-Based Debug Logger'  \
     --set enabled:true 
 
@@ -475,6 +485,7 @@ dsconfig set-consent-service-prop \
     --set base-dn:ou=consents,${USER_BASE_DN}  \
     --set bind-dn:cn=dmanager  \
     --set 'consent-record-identity-mapper:User ID Exact Match'  \
+    --set 'service-account-dn:cn=Directory Manager,cn=Root DNs,cn=config'  \
     --set unprivileged-consent-scope:urn:pingdirectory:consent  \
     --set privileged-consent-scope:urn:pingdirectory:consent_admin 
 
