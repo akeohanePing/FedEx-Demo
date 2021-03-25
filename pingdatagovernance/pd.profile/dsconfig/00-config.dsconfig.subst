@@ -8,6 +8,15 @@ dsconfig set-trust-manager-provider-prop \
     --provider-name 'Blind Trust'  \
     --set enabled:true 
 
+dsconfig create-scim-schema \
+    --schema-name urn:example:SimpleUser  \
+    --set display-name:SimpleUser 
+
+dsconfig create-scim-attribute \
+    --schema-name urn:example:SimpleUser  \
+    --attribute-name username  \
+    --set required:true 
+
 dsconfig create-external-server \
     --server-name beeceptor  \
     --type api  \
@@ -57,6 +66,31 @@ dsconfig create-load-balancing-algorithm \
     --set enabled:true  \
     --set backend-server:pingdirectory 
 
+dsconfig create-store-adapter \
+    --adapter-name AdminStoreAdapter  \
+    --type ldap  \
+    --set enabled:true  \
+    --set load-balancing-algorithm:dg-lba  \
+    --set structural-ldap-objectclass:inetOrgPerson  \
+    --set auxiliary-ldap-objectclass:ds-cfg-root-dn-user  \
+    --set 'include-base-dn:cn=Root DNS,cn=config' 
+
+dsconfig create-scim-resource-type \
+    --type-name AdminUsers  \
+    --type mapping  \
+    --set enabled:true  \
+    --set endpoint:Admins  \
+    --set primary-store-adapter:AdminStoreAdapter  \
+    --set core-schema:urn:example:SimpleUser 
+
+dsconfig create-store-adapter-mapping \
+    --type-name AdminUsers  \
+    --mapping-name 'username to uid'  \
+    --set scim-resource-type-attribute:username  \
+    --set store-adapter-attribute:cn  \
+    --set writable:false  \
+    --set searchable:true 
+
 dsconfig set-store-adapter-prop \
     --adapter-name UserStoreAdapter  \
     --set enabled:true  \
@@ -70,6 +104,20 @@ dsconfig create-scim-resource-type \
     --set enabled:true  \
     --set endpoint:Users  \
     --set primary-store-adapter:UserStoreAdapter 
+
+dsconfig create-access-token-validator \
+    --validator-name 'Mock match admins'  \
+    --type mock  \
+    --set enabled:true  \
+    --set evaluation-order-index:1 
+
+dsconfig create-token-resource-lookup-method \
+    --validator-name 'Mock match admins'  \
+    --method-name 'Admin username matches token sub'  \
+    --type scim  \
+    --set evaluation-order-index:1  \
+    --set scim-resource-type:AdminUsers  \
+    --set 'match-filter:username eq "%sub%"' 
 
 dsconfig create-access-token-validator \
     --validator-name pingfederateATV  \

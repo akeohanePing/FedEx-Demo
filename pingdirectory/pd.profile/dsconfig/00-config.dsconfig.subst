@@ -78,6 +78,11 @@ dsconfig create-local-db-index \
     --set index-type:ordering  \
     --set index-type:substring 
 
+dsconfig create-local-db-index \
+    --backend-name userRoot  \
+    --index-name ping-consent-subject-dn  \
+    --set index-type:equality 
+
 dsconfig create-external-server \
     --server-name MailTrap  \
     --type smtp  \
@@ -107,6 +112,12 @@ dsconfig set-access-control-handler-prop \
     --add 'global-aci:(targetcontrol="1.3.6.1.1.13.2")(version 3.0; acl "Anonymous access to the post-read request control as described in RFC 4527"; allow (read) userdn="ldap:///anyone";)'  \
     --add 'global-aci:(targetcontrol="1.3.6.1.4.1.30221.2.5.40")(version 3.0;acl "Authenticated access to the password validation details request control for the Delegated Admin API"; allow (read) userdn="ldap:///all";)'  \
     --add 'global-aci:(targetcontrol="1.3.6.1.4.1.4203.1.10.2")(version 3.0;acl "Authenticated access to the no-op request control for the Delegated Admin API"; allow (read) userdn="ldap:///all";)' 
+
+dsconfig create-access-token-validator \
+    --validator-name 'Mock match admin users'  \
+    --type mock  \
+    --set 'identity-mapper:All Admin Users'  \
+    --set enabled:true 
 
 dsconfig create-access-token-validator \
     --validator-name PingFederate  \
@@ -366,9 +377,17 @@ dsconfig create-http-servlet-cross-origin-policy \
     --set 'cors-allowed-origins: *' 
 
 dsconfig set-http-servlet-extension-prop \
+    --extension-name Consent  \
+    --set 'identity-mapper:All Admin Users' 
+
+dsconfig set-http-servlet-extension-prop \
     --extension-name 'Delegated Admin'  \
     --set 'cross-origin-policy:Delegated Admin Cross-Origin Policy'  \
     --set access-token-scope:urn:pingidentity:directory-delegated-admin 
+
+dsconfig set-http-servlet-extension-prop \
+    --extension-name 'Directory REST API'  \
+    --set access-token-scope:urn:pingdirectory:directory-rest-api 
 
 dsconfig set-http-servlet-extension-prop \
     --extension-name SCIM2  \
@@ -377,6 +396,10 @@ dsconfig set-http-servlet-extension-prop \
 dsconfig set-log-publisher-prop \
     --publisher-name 'Data Recovery Log'  \
     --set enabled:false 
+
+dsconfig set-log-publisher-prop \
+    --publisher-name 'Debug Trace Logger'  \
+    --set enabled:true 
 
 dsconfig set-log-publisher-prop \
     --publisher-name 'File-Based Debug Logger'  \
@@ -430,6 +453,72 @@ dsconfig create-root-dn-user \
     --set privilege:unindexed-search  \
     --set is-proxyable:prohibited 
 
+dsconfig create-virtual-attribute \
+    --name 'Consent bxShareCommsConsent-Address'  \
+    --type mirror  \
+    --set enabled:true  \
+    --set attribute-type:bxsharecommsconsent-address  \
+    --set base-dn:ou=consents,${USER_BASE_DN}  \
+    --set 'filter:(&(ping-consent-definition:jsonObjectFilterExtensibleMatch:={"filterType": "equals", "field": "id", "value": "share-comm-preferences"})(ping-consent-data:jsonObjectFilterExtensibleMatch:={"filterType": "equals", "field": "homeAddress", "value": true }))'  \
+    --set source-attribute:ping-consent-state 
+
+dsconfig create-virtual-attribute \
+    --name 'Consent bxShareCommsConsent-Email'  \
+    --type mirror  \
+    --set enabled:true  \
+    --set attribute-type:bxsharecommsconsent-email  \
+    --set base-dn:ou=consents,${USER_BASE_DN}  \
+    --set 'filter:(&(ping-consent-definition:jsonObjectFilterExtensibleMatch:={"filterType": "equals", "field": "id", "value": "share-comm-preferences"})(ping-consent-data:jsonObjectFilterExtensibleMatch:={"filterType": "equals", "field": "email", "value": true }))'  \
+    --set source-attribute:ping-consent-state 
+
+dsconfig create-virtual-attribute \
+    --name 'Consent bxShareCommsConsent-SMS'  \
+    --type mirror  \
+    --set enabled:true  \
+    --set attribute-type:bxsharecommsconsent-sms  \
+    --set base-dn:ou=consents,${USER_BASE_DN}  \
+    --set 'filter:(&(ping-consent-definition:jsonObjectFilterExtensibleMatch:={"filterType": "equals", "field": "id", "value": "share-comm-preferences"})(ping-consent-data:jsonObjectFilterExtensibleMatch:={"filterType": "equals", "field": "sms", "value": true }))'  \
+    --set source-attribute:ping-consent-state 
+
+dsconfig create-virtual-attribute \
+    --name 'User bxConsentDN'  \
+    --type identify-references  \
+    --set enabled:true  \
+    --set attribute-type:bxconsentdn  \
+    --set base-dn:ou=People,${USER_BASE_DN}  \
+    --set referenced-by-attribute:ping-consent-subject-dn  \
+    --set reference-search-base-dn:ou=consents,${USER_BASE_DN} 
+
+dsconfig create-virtual-attribute \
+    --name 'User bxShareCommsConsent-Address'  \
+    --type mirror  \
+    --set enabled:true  \
+    --set attribute-type:bxsharecommsconsent-address  \
+    --set base-dn:ou=People,${USER_BASE_DN}  \
+    --set require-explicit-request-by-name:true  \
+    --set source-attribute:bxsharecommsconsent-address  \
+    --set source-entry-dn-attribute:bxconsentdn 
+
+dsconfig create-virtual-attribute \
+    --name 'User bxShareCommsConsent-Email'  \
+    --type mirror  \
+    --set enabled:true  \
+    --set attribute-type:bxsharecommsconsent-email  \
+    --set base-dn:ou=People,${USER_BASE_DN}  \
+    --set require-explicit-request-by-name:true  \
+    --set source-attribute:bxsharecommsconsent-email  \
+    --set source-entry-dn-attribute:bxconsentdn 
+
+dsconfig create-virtual-attribute \
+    --name 'User bxShareCommsConsent-SMS'  \
+    --type mirror  \
+    --set enabled:true  \
+    --set attribute-type:bxsharecommsconsent-sms  \
+    --set base-dn:ou=People,${USER_BASE_DN}  \
+    --set require-explicit-request-by-name:true  \
+    --set source-attribute:bxsharecommsconsent-sms  \
+    --set source-entry-dn-attribute:bxconsentdn 
+
 dsconfig set-account-status-notification-handler-prop \
     --handler-name 'Multi-Part Email'  \
     --set enabled:true  \
@@ -475,6 +564,7 @@ dsconfig set-consent-service-prop \
     --set base-dn:ou=consents,${USER_BASE_DN}  \
     --set bind-dn:cn=dmanager  \
     --set 'consent-record-identity-mapper:User ID Exact Match'  \
+    --set 'service-account-dn:cn=Directory Manager,cn=Root DNs,cn=config'  \
     --set unprivileged-consent-scope:urn:pingdirectory:consent  \
     --set privileged-consent-scope:urn:pingdirectory:consent_admin 
 
