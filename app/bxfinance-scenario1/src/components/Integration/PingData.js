@@ -35,7 +35,7 @@ class PingData {
         const userRDN = 'uid=' + encodeURIComponent(uid);
         const myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
-        myHeaders.append("Authorization", "Basic Y249ZG1hbmFnZXI6MkZlZGVyYXRlTTByZQ=="); /* TODO this should be obfuscated somehow. */
+        myHeaders.append("Authorization", "Basic Y249YWRtaW5pc3RyYXRvcjoyRmVkZXJhdGVNMHJl"); /* TODO this should be obfuscated somehow. */
 
         const requestOptions = {
             method: 'GET',
@@ -60,7 +60,7 @@ class PingData {
         const userRDN = 'uid=' + uid;
         const myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
-        myHeaders.append("Authorization", "Basic Y249ZG1hbmFnZXI6MkZlZGVyYXRlTTByZQ==");
+        myHeaders.append("Authorization", "Basic Y249YWRtaW5pc3RyYXRvcjoyRmVkZXJhdGVNMHJl");
 
         let updateObj = { "modifications": [{ "attributeName": "bxFinanceUserAccountIDs", "modificationType": "set", "values": [{ "ids": [] }] }] };
         updateObj.modifications[0].values[0].ids = acctIds;
@@ -94,7 +94,7 @@ class PingData {
         console.info("PingData.js", "Getting all searchable users (banking customers) from PD.");
 
         var myHeaders = new Headers();
-        myHeaders.append("Authorization", "Basic Y249ZG1hbmFnZXI6MkZlZGVyYXRlTTByZQ==");
+        myHeaders.append("Authorization", "Basic Y249YWRtaW5pc3RyYXRvcjoyRmVkZXJhdGVNMHJl");
 
         var requestOptions = {
             method: 'GET',
