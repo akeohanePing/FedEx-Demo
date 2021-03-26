@@ -7,7 +7,7 @@
         <urn:Field name="Encryption Method">NONE</urn:Field>
         <urn:Field name="SMTPS Port">465</urn:Field>
         <urn:Field name="Username">572ee1077900a7</urn:Field>
-        <urn:Field name="Password">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRmQ3WmhZNWo0ayIsInZlcnNpb24iOiIxMC4wLjEuNSJ9..F4OQS2jwA-jxAyOFvNffYQ.KB2iaAoBpezXEEgQaxkjkA.4BNqg5RGYOZ0iHH6KL1q1g</urn:Field>
+        <urn:Field name="Password">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRmQ3WmhZNWo0ayIsInZlcnNpb24iOiIxMC4wLjEuNSJ9..F4OQS2jwA-jxAyOFvNffYQ.KB2iaAoBpezXEEgQaxkjkA.4BNqg5RGYOZ0iHH6KL1q${MAX_HEAP_SIZE}</urn:Field>
         <urn:Field name="Test Address">test@bxfinance.org</urn:Field>
         <urn:Field name="Connection Timeout">30</urn:Field>
         <urn:Field name="Company Logo">company-logo.png</urn:Field>

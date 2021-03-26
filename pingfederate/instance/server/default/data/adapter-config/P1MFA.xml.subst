@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urn:AdapterConfiguration authnCtxClassRef="" isInheritAttributeSettings="false" isInheritAttributeMapping="false" maskOgnlValues="false" uniqueUserKeyField="pf_none" isInheritExtendedContractAttributes="false" name="P1MFA" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
     <urn:Fields>
-        <urn:Field name="PingOne Environment">4dq7B5Reksx31i1zw41DKt|17161047-290f-4c88-b771-01adc4e81564</urn:Field>
-        <urn:Field name="Environment ID">17161047-290f-4c88-b771-01adc4e81564</urn:Field>
-        <urn:Field name="Region">NA</urn:Field>
-        <urn:Field name="Application Client ID">028887be-5d57-4cb8-aeb9-874c4f202ae0</urn:Field>
-        <urn:Field name="Application Client Secret">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRmQ3WmhZNWo0ayIsInZlcnNpb24iOiIxMC4yLjAuOC1TTkFQU0hPVCJ9..grmkbITMj83Dn-9o44I06A.rLewLQ_I6eK7Y1VqBn0x9qR0IFQ3eMSXHiBzkYLSLu2TTsGBF4GiEafKC81wK0thXjZqbqKtfGptDBIpqlotbAJSMFhUSGGPSY6x8OTSGvQ.f_YSmWHv5i0erPZ_YHR2cQ</urn:Field>
-        <urn:Field name="PingFederate Connection Client ID">86e4c911-042e-42fa-9e29-1e98b2014e01</urn:Field>
-        <urn:Field name="PingFederate Connection Client Secret">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRmQ3WmhZNWo0ayIsInZlcnNpb24iOiIxMC4yLjAuOC1TTkFQU0hPVCJ9..cvVqToxKemojpAN67ycztA.BFFtJltCkld_wbKeG_7aDff6R-1HBWu97PrUMUMC5Av3hS9ot6gph2eGoCDBKKMUmg3Qw7gTZo8TbBKnuajTLHAl9x-kfQPyHfWOFIr8itI.SJlGp2bNhPClRRZl7sF9GA</urn:Field>
+        <urn:Field name="PingOne Environment">alQSgCCPpKsKEBsrSh8sD9|16af3fc1-3cf7-4a78-a229-67c9f5c58b1e</urn:Field>
+        <urn:Field name="Application Client ID">0042612a-9aa9-4a58-8977-6bcba7fc4dca</urn:Field>
+        <urn:Field name="Application Client Secret">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRmQ3WmhZNWo0ayIsInZlcnNpb24iOiIxMC4yLjAuMTMifQ..UrNzFHn7KEXMWfEG7efjbQ.DsJ_SdhPAPOPSp8_J-R6uOxLwOmE9n7EHQwYvDchsYdJvK6DPkYkDmADE0i9AjBCMaCOAlS3MTyJQFvMU6QNe9JcJdqteOUV4LuEztpzx5Q.S7TGW-YcfvDborYCK4zcmg</urn:Field>
         <urn:Field name="PingOne Authentication Policy">Multi_Factor</urn:Field>
-        <urn:Field name="Test Username">barbielyle</urn:Field>
+        <urn:Field name="Test Username">user.0</urn:Field>
         <urn:Field name="HTML Template Prefix">pingone-mfa</urn:Field>
         <urn:Field name="Messages Files">pingone-mfa-messages</urn:Field>
         <urn:Field name="User Not Found Failure Mode">Block user</urn:Field>
@@ -24,7 +20,7 @@
         <urn:Field name="Custom Proxy Port"/>
     </urn:Fields>
     <urn:AdvancedFields>
-        <urn:Field name="Test Username">barbielyle</urn:Field>
+        <urn:Field name="Test Username">user.0</urn:Field>
         <urn:Field name="HTML Template Prefix">pingone-mfa</urn:Field>
         <urn:Field name="Messages Files">pingone-mfa-messages</urn:Field>
         <urn:Field name="User Not Found Failure Mode">Block user</urn:Field>

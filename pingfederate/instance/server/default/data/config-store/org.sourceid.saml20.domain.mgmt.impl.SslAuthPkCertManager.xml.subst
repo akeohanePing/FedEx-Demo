@@ -6,4 +6,6 @@
     <con:map name="https://pingone.com/idp/cd-1635691986.pingidentity"/>
     <con:map name="${PF_BASE_URL}"/>
     <con:map name="PingOneConnector"/>
+    <con:map name="https://pingone.com/idp/39501e79-7974-4388-a4c4-6a4b7766f481"/>
+    <con:map name="HTTPBIN"/>
 </con:config>

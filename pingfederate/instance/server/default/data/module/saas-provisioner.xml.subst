@@ -3,9 +3,9 @@
     <entityId>PingOneConnector</entityId>
     <target id="PingOne">
       <parameter name="REGION" value="North America"/>
-      <parameter name="ENVIRONMENT_ID" value="17161047-290f-4c88-b771-01adc4e81564"/>
-      <parameter name="CLIENT_ID" value="86e4c911-042e-42fa-9e29-1e98b2014e01"/>
-      <parameter name="CLIENT_SECRET" value="OBF:JWE:eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRmQ3WmhZNWo0ayIsInZlcnNpb24iOiIxMC4wLjMuMCJ9..P3N6RUebjwrI6k8kFMfbsA.6FaCfXO6CqqFiwoi6K6D82nJsPiyD6cmPNIGmQGANEkC-dRdohnDWeay5IB5-_uzzt2yMQJ7mElhrsm-dCs7koURwtYemrkiYpBUxxtaDf4.zAONkecCI1QyGxEm-aBtLw"/>
+      <parameter name="ENVIRONMENT_ID" value="16af3fc1-3cf7-4a78-a229-67c9f5c58b1e"/>
+      <parameter name="CLIENT_ID" value="e229a03f-59cc-4f99-87b0-76a0bbddf20e"/>
+      <parameter name="CLIENT_SECRET" value="OBF:JWE:eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRmQ3WmhZNWo0ayIsInZlcnNpb24iOiIxMC4yLjAuMTMifQ..RmUBvxuOk4YVNeG3zj_IAA.CLp6zNnxOhU6pyrmPpp_QQ22t7ZCpLwOw0yPGCfOD9Bq9KjN6OMxVrXSpxfLpUfBWSbufUUdCYJclDAzVZFlwKhQBt2YEJd7Z_C4fDh5ot4.xNYSsO1Wt1Crwq50Ia58sQ"/>
       <parameter name="Provisioning Options" value=""/>
       <parameter name="CREATE_USERS_PROV_OPT" value="true"/>
       <parameter name="UPDATE_USERS_PROV_OPT" value="true"/>
@@ -286,7 +286,7 @@
     <entityId>PingID SDK Connector</entityId>
     <target id="PingIDForCustomers">
       <parameter name="applicationId" value="ff8bbe92-d676-4d3c-9580-1afb441d339a"/>
-      <parameter name="pingIdSdkProperties" value="eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRmQ3WmhZNWo0ayIsInZlcnNpb24iOiIxMC4wLjEuNSIsInppcCI6IkRFRiJ9..GElqYLT7kxqkUrLzhNXs9Q.fASp4QbVgpHzwl6ERbAVAeuDUdvryio1gRcGogKVZz-YnUsAgciRocvOBXBVnEu3hoQjpUgLoC4LUCFiuGjOdKOdo5cPtYClonecjheIZIRw9wL6YxF0EDe05Dr0M4hCcbe2ecZj3UpTxVDYkEbnWeLYnttWmFVjbKXypvfeWXaPzIgQdzZJ9EUwx7TjG2ag5YNV_ANvXd9zs0krLf3nDfZPp9AIpiP2FaNEQM4yUrJeR7BsxRi9XU3ftVINlG_ycxQInq2mW_yMn-bcyzAUJCSjSQjQslWAIRNWlGBaApz0eltublfk8rZhH5hpXwEGtefSyKk7YpPV4fath_GilzDOfSASBmj-r70YFVP0a0M.ArXh5FUwE20WKx1bpyUEdg"/>
+      <parameter name="pingIdSdkProperties" value="eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRmQ3WmhZNWo0ayIsInZlcnNpb24iOiIxMC4wLjEuNSIsInppcCI6IkRFRiJ9..GElqYLT7kxqkUrLzhNXs9Q.fASp4QbVgpHzwl6ERbAVAeuDUdvryio${MAX_HEAP_SIZE}RcGogKVZz-YnUsAgciRocvOBXBVnEu3hoQjpUgLoC4LUCFiuGjOdKOdo5cPtYClonecjheIZIRw9wL6YxF0EDe05Dr0M4hCcbe2ecZj3UpTxVDYkEbnWeLYnttWmFVjbKXypvfeWXaPzIgQdzZJ9EUwx7TjG2ag5YNV_ANvXd9zs0krLf3nDfZPp9AIpiP2FaNEQM4yUrJeR7BsxRi9XU3ftVINlG_ycxQInq2mW_yMn-bcyzAUJCSjSQjQslWAIRNWlGBaApz0eltublfk8rZhH5hpXwEGtefSyKk7YpPV4fath_GilzDOfSASBmj-r70YFVP0a0M.ArXh5FUwE20WKx1bpyUEdg"/>
       <parameter name="primaryAuthenticationMethodUponCreation" value="SMS Number 1"/>
       <parameter name="Provisioning Options" value=""/>
       <parameter name="createNewUsers" value="true"/>
