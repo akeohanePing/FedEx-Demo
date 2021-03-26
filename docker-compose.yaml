@@ -77,6 +77,17 @@ services:
     ports:
       - 3443:443
 
+  pingdelegator:
+    image: pingidentity/pingdelegator:2012-4.4.0
+    env_file:
+      - ~/.pingidentity/devops
+      - ./env_vars
+    environment:
+      - SERVER_PROFILE_URL=https://github.com/pingidentity/pingidentity-server-profiles.git
+      - SERVER_PROFILE_PATH=baseline/devops
+    ports:
+      - 6443:6443
+
   
 
   
