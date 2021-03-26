@@ -27,7 +27,7 @@
   - pingdirectory:636
   - administrator / 2FederateM0re
   - Via Apache: ldaps://pingdirectory:1636
-  - cn=dmanager / 2FederateM0re
+  - cn=administrator / 2FederateM0re
 * Access [PingDataGovernance] (http://pingdataconsole:8080/console/login)
   - pingdatagovernance:636
   - administrator / 2FederateM0re
