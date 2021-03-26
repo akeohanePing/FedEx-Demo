@@ -16,16 +16,6 @@
     margin-bottom: 12px !important
 }
 
-@media screen and (min-width: 2750px){
-    .inputParent{
-        position: absolute;
-        top: 55% !important;
-        left: calc(50% - 275px);
-        z-index: 2;
-        width: 550px
-    }
-}
-
 .submitButton{
     width: 146px;
     background-color: #ff6200 !important;
