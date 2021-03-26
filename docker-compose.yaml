@@ -78,7 +78,7 @@ services:
       - 3443:443
 
   pingdelegator:
-    image: pingidentity/pingdelegator:edge
+    image: pingidentity/pingdelegator:2012-4.4.0
     env_file:
       - ~/.pingidentity/devops
       - ./env_vars
