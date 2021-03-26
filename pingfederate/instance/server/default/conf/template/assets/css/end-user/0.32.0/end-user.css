@@ -6212,7 +6212,7 @@ table.grid--small-padding td {
 }
 
 .button {
-    background: #fff;
+    background: #FF6200;
     border: 1px solid #afb4b8;
     display: block;
     padding: 9px;
@@ -6238,8 +6238,8 @@ table.grid--small-padding td {
 
 .button--primary {
     color: #fff;
-    background: #2996cc;
-    border-color: #2996cc
+    background: #FF6200;
+    border-color: #FF6200
 }
 
 .button--primary:hover {
@@ -7499,6 +7499,7 @@ input:-webkit-autofill:active ~ .float-label__label, input:-webkit-autofill:focu
 
 .org-logo {
     text-align: center;
+    background: #fff;
     margin: 0 auto 25px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
