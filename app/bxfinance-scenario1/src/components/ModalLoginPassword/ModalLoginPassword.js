@@ -406,7 +406,8 @@ class ModalLoginPassword extends React.Component {
                           }
                       }}
                       label="User Id"
-                      variant="filled"    
+                      variant="filled" 
+                      value={this.state.userName}   
                   />
                   </FormGroup>
                   <FormGroup className="form-group-light">
