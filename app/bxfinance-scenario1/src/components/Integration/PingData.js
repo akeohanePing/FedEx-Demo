@@ -102,7 +102,7 @@ class PingData {
             redirect: 'follow'
         };
         // TODO we need some attribute or way to filter user to only include ones created for demos.
-        const url = this.pdReSTURI + this.pdPeopleRDN + this.pdSubtreeResource + "searchScope=" + searchScope + "&limit=" + limit + "&filter=not(bxFinanceUserType pr)";
+        const url = this.pdReSTURI + this.pdPeopleRDN + this.pdSubtreeResource + "searchScope=" + searchScope + "&limit=" + limit + "&filter=bxFinanceUserAuthnPreferences pr";
 
         return fetch(url, requestOptions);
     }
