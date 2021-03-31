@@ -5,7 +5,7 @@
       <parameter name="REGION" value="North America"/>
       <parameter name="ENVIRONMENT_ID" value="16af3fc1-3cf7-4a78-a229-67c9f5c58b1e"/>
       <parameter name="CLIENT_ID" value="e229a03f-59cc-4f99-87b0-76a0bbddf20e"/>
-      <parameter name="CLIENT_SECRET" value="OBF:JWE:eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRmQ3WmhZNWo0ayIsInZlcnNpb24iOiIxMC4yLjAuMTMifQ..RmUBvxuOk4YVNeG3zj_IAA.CLp6zNnxOhU6pyrmPpp_QQ22t7ZCpLwOw0yPGCfOD9Bq9KjN6OMxVrXSpxfLpUfBWSbufUUdCYJclDAzVZFlwKhQBt2YEJd7Z_C4fDh5ot4.xNYSsO1Wt1Crwq50Ia58sQ"/>
+      <parameter name="CLIENT_SECRET" value="OBF:JWE:eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRmQ3WmhZNWo0ayIsInZlcnNpb24iOiIxMC4yLjAuMTMifQ..LP6bg9uN6xjcoFWi4Al_bg.mdrIKqo_0r-esy9dMgixYH-64b130MiwxVA_VP5lo-IodyuDIRm2AbYCWGfW4lsibLl9bTnW97BMcGUeV2GRabAGfyMn60VWapxZKQ9lM94.HkDkZf-vCFlJRvvecBd0HQ"/>
       <parameter name="Provisioning Options" value=""/>
       <parameter name="CREATE_USERS_PROV_OPT" value="true"/>
       <parameter name="UPDATE_USERS_PROV_OPT" value="true"/>
@@ -62,7 +62,7 @@
           <attributeGroup>false</attributeGroup>
         </fieldInfo>
         <fieldConfig>
-          <default>fe7c4e38-2932-425a-a7ab-aac1b3556e22</default>
+          <default>5f7ed2f3-e313-44a5-9453-d18ed9e42694</default>
         </fieldConfig>
       </identityMappingField>
       <identityMappingField fieldName="accountID">

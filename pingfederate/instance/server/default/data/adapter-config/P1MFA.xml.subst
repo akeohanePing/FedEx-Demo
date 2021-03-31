@@ -3,9 +3,9 @@
     <urn:Fields>
         <urn:Field name="PingOne Environment">alQSgCCPpKsKEBsrSh8sD9|16af3fc1-3cf7-4a78-a229-67c9f5c58b1e</urn:Field>
         <urn:Field name="Application Client ID">0042612a-9aa9-4a58-8977-6bcba7fc4dca</urn:Field>
-        <urn:Field name="Application Client Secret">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRmQ3WmhZNWo0ayIsInZlcnNpb24iOiIxMC4yLjAuMTMifQ..UrNzFHn7KEXMWfEG7efjbQ.DsJ_SdhPAPOPSp8_J-R6uOxLwOmE9n7EHQwYvDchsYdJvK6DPkYkDmADE0i9AjBCMaCOAlS3MTyJQFvMU6QNe9JcJdqteOUV4LuEztpzx5Q.S7TGW-YcfvDborYCK4zcmg</urn:Field>
-        <urn:Field name="PingOne Authentication Policy">Multi_Factor</urn:Field>
-        <urn:Field name="Test Username">user.0</urn:Field>
+        <urn:Field name="Application Client Secret">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRmQ3WmhZNWo0ayIsInZlcnNpb24iOiIxMC4yLjAuMTMifQ..0j_IafDaOWe_vN9aGjod4g.C6YzJ-yPgYPYAwlJZOD2nXvsfzDhg3puVfhhHDy0ODnxBWambzUgCfOIfjiwhADkyp7oFw1alDi6m5AC7yqumFH8SEOmzYRzjJNmrFe-qJs.Ig0nGv4L2q5PDbjuj54RSA</urn:Field>
+        <urn:Field name="PingOne Authentication Policy">Standalone_MFA</urn:Field>
+        <urn:Field name="Test Username">adamgipsonDevice</urn:Field>
         <urn:Field name="HTML Template Prefix">pingone-mfa</urn:Field>
         <urn:Field name="Messages Files">pingone-mfa-messages</urn:Field>
         <urn:Field name="User Not Found Failure Mode">Block user</urn:Field>
@@ -20,7 +20,7 @@
         <urn:Field name="Custom Proxy Port"/>
     </urn:Fields>
     <urn:AdvancedFields>
-        <urn:Field name="Test Username">user.0</urn:Field>
+        <urn:Field name="Test Username">adamgipsonDevice</urn:Field>
         <urn:Field name="HTML Template Prefix">pingone-mfa</urn:Field>
         <urn:Field name="Messages Files">pingone-mfa-messages</urn:Field>
         <urn:Field name="User Not Found Failure Mode">Block user</urn:Field>
