@@ -27,6 +27,8 @@ services:
       - 1636:636
       - 1443:443
       - 2443:2443
+    volumes:
+      - ./pingdirectory:/opt/out
 
  
   pingdataconsole:
